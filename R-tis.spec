@@ -4,7 +4,7 @@
 #
 Name     : R-tis
 Version  : 1.30
-Release  : 9
+Release  : 10
 URL      : http://cran.r-project.org/src/contrib/tis_1.30.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/tis_1.30.tar.gz
 Summary  : Time Indexes and Time Indexed Series
