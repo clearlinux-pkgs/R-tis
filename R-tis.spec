@@ -4,13 +4,17 @@
 #
 Name     : R-tis
 Version  : 1.30
-Release  : 12
+Release  : 13
 URL      : http://cran.r-project.org/src/contrib/tis_1.30.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/tis_1.30.tar.gz
 Summary  : Time Indexes and Time Indexed Series
 Group    : Development/Tools
 License  : Public-Domain
 Requires: R-tis-lib
+Requires: R-ggplot2
+Requires: R-zoo
+BuildRequires : R-ggplot2
+BuildRequires : R-zoo
 BuildRequires : clr-R-helpers
 
 %description
@@ -34,8 +38,10 @@ lib components for the R-tis package.
 %install
 rm -rf %{buildroot}
 export LANG=C
-export CFLAGS="$CFLAGS -O3 -flto -ffunction-sections -fno-semantic-interposition -freorder-functions "
-export CXXFLAGS="$CXXFLAGS -O3 -flto -ffunction-sections -fno-semantic-interposition -freorder-functions "
+export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
@@ -43,6 +49,7 @@ mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library tis
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
