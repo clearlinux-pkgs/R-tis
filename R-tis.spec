@@ -4,7 +4,7 @@
 #
 Name     : R-tis
 Version  : 1.34
-Release  : 41
+Release  : 42
 URL      : https://cran.r-project.org/src/contrib/tis_1.34.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tis_1.34.tar.gz
 Summary  : Time Indexes and Time Indexed Series
