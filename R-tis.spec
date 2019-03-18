@@ -4,7 +4,7 @@
 #
 Name     : R-tis
 Version  : 1.37.1
-Release  : 48
+Release  : 49
 URL      : https://cran.r-project.org/src/contrib/tis_1.37.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/tis_1.37.1.tar.gz
 Summary  : Time Indexes and Time Indexed Series
